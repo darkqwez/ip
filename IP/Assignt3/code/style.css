@@ -1,0 +1,15 @@
+
+.imghead{
+    width: 40vw;
+}
+.header{
+    align-items: center;
+}
+.headers{
+    /* height: 100vh; */
+}
+.headingtext{
+    font-weight: 900;
+    font-size: 5rem;
+    
+}

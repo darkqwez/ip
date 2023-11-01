@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveySphere</title>
+    <link rel="stylesheet" href="style2.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      table, th, td {
+      border:1px solid rgb(13, 13, 14);
+      border-collapse: collapse ;
+      }
+      input{
+        text-align: center;
+      }
+      textarea{
+        background-color: #e6f7f9;
+      }
+      
+button {
+  padding: 9px 25px;
+  background-color: rgb(50, 138, 160);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+</style>
+</head>
+<body style="background-color: #263159;">
+    <section class="landing">
+        <nav style="
+             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 10vh;
+            padding: 25px 25px;
+            background-color: #eaf6f6;
+            margin-bottom: 3vh;">
+          <h1 style="font-family: 'Lobster', cursive;
+          font-weight: lighter;
+          font-size: 2rem;">SurveySphere</h1>
+          <ul style="
+            display: flex;
+            list-style: none;">
+            <li style="
+            padding-left: 5rem;
+            font-size: 1.2rem;">
+            Home</li>
+            <li style="padding-left: 5rem;
+            font-size: 1.2rem;">Survey Lists</li>
+            <li style="padding-left: 5rem;
+            font-size: 1.2rem;">About</li>
+
+          </ul>
+          <button>Contact Us</button>
+        </nav>
+        
+      </section>
+
+        <form action="#" method="POST">
+          <div style="background: beige;
+          color: black;
+          text-align: center;
+          padding: 50px 0;
+          width: 80vw;
+          margin: auto;"><h2>AC Locals: Luxury or Necessity?</h2></div>
+      
+            <div style="  width: 95vw;
+            margin: 4vh auto;
+            text-align:center;
+            font-size: 1.2rem;">
+              <table style="  background-color: beige;
+              margin: 0%;">
+                <tr>
+                  <th>Questions</th>
+                  <th>Rating(1,2,3,4,5)</th>
+                  <th>Answer </th>
+                </tr>
+      
+              
+      
+                <tr>
+                  <td>Name</td>
+                  <td></td>
+             
+                  <td><textarea id="" cols="50" rows="4"  ></textarea></td>
+                </tr>
+      
+                <tr>
+                  <td>Can AC locals be justified as we face hot and humid climates in India?</td>
+                  <td><input type="text" /></td>
+             
+                  <td><textarea id="" cols="50" rows="4"  ></textarea></td>
+                </tr>
+      
+                <tr>
+                  <td>Are you aware that air conditioned train is considered as necessity according to glocal standards?</td>
+                  <td><input type="text"/></td>
+               
+                  <td><textarea cols="50" rows="4"  ></textarea></td>
+                </tr>
+      
+                <tr>
+                  <td>
+                   Do you think AC trains end up contributing to the GDP of the nation?
+                  </td>
+                  <td><input type="text" /></td>
+               
+                  <td><textarea cols="50" rows="4"  ></textarea></td>
+                </tr>
+      
+                <tr>
+                  <td>
+                   Is the AC local price proper as compared to regular local train? 
+                  </td>
+                  <td><input type="text" onblur="calculates1()"/></td>
+                
+                  <td><textarea cols="50" rows="4"  ></textarea></td>
+                </tr>
+                <tr>
+                  <td>Any more suggestions?</td>
+                  <td><input type="text"  onblur="calculates5()"/></td>
+                
+                  <td><textarea  cols="50" rows="4"  ></textarea></td>
+                </tr>
+              </table>
+              <input style="height: 7vh;
+              width: 10vw; 
+              background-color: rgb(148, 234, 205);
+              border-radius:10px;" type="submit" value="Submit" >
+            </div>
+          </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SurveySphere</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+button {
+  padding: 9px 25px;
+  background-color: rgb(50, 138, 160);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    padding: 25px 25px;
+    background-color: #bef3f3;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  .nav-links li {
+    padding-left: 5rem;
+    font-size: 1.2rem;
+  }
+  #logo {
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+    font-size: 2rem;
+  }
+
+
+  .surveyshere{
+    /* background-color: rgb(193, 243, 226); */
+    background-color: azure;
+    text-align: center;
+  }
+  .ongoing,.upcoming,.completed{
+    padding: 3rem;
+    font-style: italic;
+  }
+
+  .contains{
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-around;
+  }
+  .survey{
+    /* background-color: black ; */
+    width: 30vw;
+    height: 20vh;
+    border-radius: 10px;
+    text-align: center;
+    padding: 45px;
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+.purple{
+    background-color: #bfb7f1  ;
+}
+.blue{
+    background-color: #0ae8f0  ;
+}
+
+.darkblue{
+    background-color: #56a0eb  ;
+}
+.green{
+    background-color: #66dc90  ;
+}
+hr{
+    border: 1px  solid #bef3f3;
+}
+  
+.contactUs{
+    height: 10vh;
+    padding: 20px;
+}
+    </style>
+  </head>
+  <body>
+    <section class="landing">
+      <nav>
+        <h1 id="logo">SurveySphere</h1>
+        <ul class="nav-links">
+          <li>Home</li>
+          <li>Survey Lists</li>
+          <li>About</li>
+        </ul>
+        <button>Contact Us</button>
+      </nav>
+    </section>
+
+    <div class="surveyshere">
+        <div class="ongoing">
+            <h1>Ongoing Surveys</h1>
+            <div class="contains">
+                <div class="survey blue">Is mental Illness really considered an Illness?</div>
+                <div class="survey green">Euthanasia : Should it be legal?</div>
+        </div>
+        <div class="contains">
+            <div class="survey purple">Should Uniform Civil Code be implemented in India?</div>
+            <div class="survey darkblue">Rise of India as Soft Power</div>
+    </div>
+            </div>
+        <hr>
+        <div class="upcoming"><h1>Upcoming Surveys</h1>
+            <div class="contains">
+            <div class="survey green">Should India have a 2 term limit on presidency like the US?</div>
+            <div class="survey blue">Should the voting age be lowered to 16?</div>
+            </div>
+            </div>
+        <hr>
+        <div class="completed"><h1>Completed Surveys</h1>
+            <div class="contains">        
+            <div class="survey darkblue">Social Media and Mental Health.</div>
+            <div class="survey purple">Work life balance among urban professionals.</div>
+        </div>
+        </div>
+
+    <hr />
+    <hr />
+    <hr />
+    <div class="contactUs">
+      Came Across Disturbing Surveys? -- Mail
+      <a href="mailto:darshilm1010@example.com">Here</a>
+    </div>
+  </body>
+</html>
