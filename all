@@ -737,5 +737,76 @@ export default MyForm;
 
 =================================================================================================================================================
 
+Props and State
 
+mport React, { Component } from "react";
+export default class ClassC extends Component {
+
+state = {
+style: {},
+};
+
+changeState = () => {
+this.setState({
+style: {
+color: "#b5b",
+fontSize: "3rem",
+},
+})
+};
+
+onclick = this.setState
+
+
+//Props in class
+const { hour, minute, sec } = this.props;
+console.log(minute);
+
+
+-=====================================================================================================================
+
+Forms and State
+
+
+const [darsh_form, setDarsh_form] = useState({
+name: '',
+description: '',
+year: '',
+gender: '',
+age: '',
+});
+const handleChange = (event) => {
+const { name, value, type, checked } = event.target;
+const newValue = type === 'checkbox' ? checked : value;
+setDarsh_form({
+...darsh_form,
+[name]: newValue,
+});
+};
+const handleSubmit = (event) => {
+event.preventDefault();
+console.log('Form submitted with data:', darsh_form);
+};
+const handleKeyDown = (event) => {
+if (event.key === 'Enter') {
+handleSubmit(event);
+}
+};
+
+
+onsubmit upar
+
+value and onchange
+
+button type="submit or reset"
+
+
+-=-=-=-=-=-==========================================================================================================
+
+BrowserRouter
+	Routes
+		Route path element
+
+
+Link to
 
