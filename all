@@ -1,0 +1,741 @@
+p::first-line - sudo element -- before after
+useRef
+
+=========================================================================================================================
+
+require('fs')
+
+fs.writeFile("filename",data,(err)=>{ if error throw error})
+fs.readFile("filename","utf-8",(err,data)=>{})
+fs.appendData(similar to writeFile)
+fs.rename(file1, file2, callback)
+fs.unlink(filenmae,callback)
+
+=====================================================================================================================
+
+require repl
+
+const r = repl.start({
+	prompt : "Started",
+	eval: (input,callback)=>{
+		const result = mycalci(input);
+		callback(null,result)
+	}
+})
+
+function madhe --> eval(input) with try catch
+
+======================================================================================================================
+
+Hooks
+
+useState useEffect useNavigate
+
+  useEffect(() => {
+    getBookmarks();
+      //eslint-disable-next-line
+  }, [])
+
+ANIMATION - framer motion
+
+   <motion.div 
+          initial={{x:"-100%",opacity:0}}
+          whileInView={{x:0,opacity:1}}
+          exit={{x:"-100%",opacity:0, transition:{duration:0,delay:0}}}
+          transition={{duration:1,delay:1,ease:'easeOut'}}>
+import {AnimatePresence, motion} from 'framer-motion'
+
+======================================================================================================================
+
+FORM and EVENTS
+
+const [darsh_form, setDarsh_form] = useState({
+name: '',
+description: '',
+});
+
+const handleChange = (event) => {
+const { name, value, type, checked } = event.target;
+const newValue = type === 'checkbox' ? checked : value;
+setDarsh_form({
+...darsh_form,
+[name]: newValue,
+});
+};
+
+const handleSubmit = (event) => {
+event.preventDefault();
+console.log('Form submitted with data:', darsh_form);
+};
+const handleKeyDown = (event) => {
+if (event.key === 'Enter') {
+handleSubmit(event);
+}
+}
+
+=======================================================================================================================
+
+PROPS and STATE
+
+usestate me new Date()
+.toLocalDateString() .getHours .getMinutes()
+
+
+state = {
+	style :{},
+}
+
+changeState = () =>{
+	this.setState({
+		style : {asdsadsadsa},
+	})
+}
+
+this.state.hour //accessing
+
+=======================================================================================================================
+
+DOM MANIPULATION & CSS
+
+.style.property = "";   //eg - backgroundColor 
+
+document.getElemmenntById().addEventListener("click ",(e)=>)
+keydown mouseover
+
+setInterval(function1,1000)
+
+DOM MANIPULATION---
+
+document.createElement('h1');
+	.createTextNode("DSADASDSAD asdsad")
+first.appendChild(second)
+document.getElementbyid.appendChild above
+
+DELETING
+document.get parent
+document.get child
+parent.removeChild(child)
+
+Changing Position
+var t2 = document.querySelectorAll(".title")[1].innerHTML;
+document.querySelectorAll(".title")[1].innerHTML
+= document.querySelectorAll(".title")[0].innerHTML;
+document.querySelectorAll(".title")[0].innerHTML =t2;
+
+=======================================================================================================================
+
+LOOPS
+
+FOR LOOPS
+let students of stud
+var i in studs //index deta hau
+let i = 0 ; i<studs.length ; i++)
+
+function res_function(...paras){
+    console.log("Total parameters passed = "+ paras.length);
+    var sum = 0;
+    for(let objs in paras){
+
+=========================================================================================================================
+
+Multimedia
+
+Multimedia Vide
+
+<video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+
+
+<audio controls>
+<source
+src=”mixkit-small-group-cheer-and-applause-518.wav”
+type=”audio/ogg”
+/>
+<source
+src=”mixkit-cinematic-transition-swoosh-heartbeat-trailer-488.wav”
+type=”audio/mpeg”
+/>
+Your browser does not support the audio element.
+</audio>
+
+=========================================================================================================================
+Inheritance
+
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return "I have a " + this.carname;
+  }
+}
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ", it is a " + this.model;
+  }
+}
+
+const myCar = new Model("Tata", "Harrier");
+console.log(myCar.show());
+//same methd
+class darshil {
+  speak() {
+    console.log("From t14");
+  }
+}
+
+class T1 extends darshil {
+  speak() {
+    console.log("From T1");
+  }
+  pspeak() {
+    super.speak();
+  }
+}
+
+
+=============================================================================================================================================
+
+ITERATOR GENERATOR
+arr1[Symbol.iterator]()
+
+iterator is an object which defines a sequence and potentially a return value upon its termination
+value,done
+
+
+When called, generator functions do not initially execute their code. Instead, they return a special type of iterator, called a Generator. When a value is consumed by calling the generator's next method, the Generator function executes until it encounters the yield keyword.
+
+let cond = true;
+let count = 0;
+function isprime(n) {
+  for (let i = 2; i < n / 2 + 1; i++) {
+    if (n % i === 0) return false;
+  }
+  // if(n%2 === 0) return true;
+  return true;
+}
+function* primegg() {
+  let n = 2;
+  while (true) {
+    if (isprime(n)) {
+      yield n;
+    }
+    n++;
+  }
+}
+const pitr = primegg();
+for (let i = 0; i < 10; i++) {
+  let nextPrime = pitr.next().value;
+  console.log(nextPrime);
+}
+
+
+././././././././././././.././././.
+let arr1 = [1, 2, 3, 4, 5];
+let iterator = arr1[Symbol.iterator]();
+// console.log(iterator.next())
+console.log(iterator);
+while (((item = iterator.next()), !item.done)) {
+  console.log(item.value);
+}
+//generator
+function* ng() {
+  let i = 0;
+  while (true) {
+    yield;
+    i;
+    i++;
+  }
+}
+let darsh = ng();
+
+console.log(darsh.next().value);
+console.log(darsh.next().value);
+console.log(darsh.next().value);
+console.log(darsh.next().value);
+
+========================================================================================================================================
+
+REF
+
+const myRefCallback = useRef(null); // Callback ref for MyComponent
+const handleClick = () => {
+if (myRefCallback.current) {
+myRefCallback.current.focus();
+}
+};
+return (
+<div className="newdiv">
+<ChildComponent ref={myRefCallback} /
+
+//Child
+
+const ChildComponent = React.forwardRef((props, ref) => {
+const inputRef = createRef(); // Callback ref for this component
+useEffect(() => {
+// Set the ref using the callback ref
+if (ref) {
+ref.current = inputRef.current;
+}
+}, [ref]);
+return (
+<input ref={inputRef} /
+
+
+======================================================================================================================================
+
+PROMISE
+
+
+function promise(){
+	return new Promise((resolve,reject)=>{
+	//fetch
+	.then(response)
+	.then(data)
+	.catch(error)
+})
+	
+}
+
+
+promise()
+.then((data)=>{})
+.catch((error)=>{})
+
+
+COMPLETE
+function fetchData(url, params) {
+  return new Promise((resolve, reject) => {
+    if (!params) {
+      reject(new Error("Params are missing"));
+      return;
+    }
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: 
+${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        resolve(data);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+let params = { key: "europe" };
+let url = `https://restcountries.com/v3.1/region/${params.key}`;
+console.log(url);
+fetchData(url, params)
+  .then((data) => {
+    console.log("Data fetched:", data);
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });
+
+=======================================================================================================================================
+
+Buffer
+
+• Method 1 :syntax to create an uninitiated Buffer of 10 octets −
+• var buf = new Buffer(10);
+• Method 2: syntax to create a Buffer from a given array −
+• var buf = new Buffer([10, 20, 30, 40, 50]);
+• Method 3: syntax to create a Buffer from a given string and optionally 
+encoding type −
+• var buf = new Buffer(“New Buffer", "utf-8")
+
+
+buf = new Buffer(256);
+len = buf.write("Hello TSEC");
+console.log("Octets written : "+ len)
+
+
+Reading from a buffer
+• buf.toString([encoding][, start][, end])
+• Parameters:
+• encoding − Encoding to use. 'utf8' is the default encoding.
+• start − Beginning index to start reading, defaults to 0.
+• end − End index to end reading, defaults is complete buffer.
+
+========================================================================================================================================
+Stream
+
+Node.js streams are based on Eventemitters.
+• Stream.on[‘data’]
+• Stream.on[‘readable’]
+• Stream.on[‘close’]
+• Stream.on[‘end’]
+• Stream.on[‘finish’]
+• Stream.destroy[]
+
+
+reading--
+var fs=require('fs')
+var readStream=fs.createReadStream('output.txt','utf-8')
+var data='';
+readStream.on('data',function(chunk){
+console.log('-----------------------------------------------------')
+data+=chunk;
+// console.log(chunk);
+})
+readStream.on('end',function(chunk){
+console.log(data)
+console.log('------------------End-----------------------------')
+})
+
+
+
+
+
+var data = "Sample text";
+• const writeStream = fileSystem.createWriteStream("output.txt");
+• writeStream.write(data, "UTF8");
+• writeStream.end()
+• writeStream.on("finish", () => {
+• console.log("Finished writing");
+• });
+• writeStream.on("error", (error) => {
+• console.log(error.stack);
+• })
+
+
+Pipelining
+var fs = require("fs");
+// Create a readable stream
+var readerStream = fs.createReadStream('abc.txt');
+// Create a writable stream
+var writerStream = fs.createWriteStream('output.txt');
+// Pipe the read and write operations
+// read abc.txt and write data to output.txt
+readerStream.pipe(writerStream);
+console.log("Program Ended");
+
+
+====================================================================================================================================
+
+net
+
+const net = require('net');
+const server = net.createServer();
+
+
+server.on("connection",(socket)=>{
+    console.log(`Client Connection details ${socket.remoteAddress} : ${socket.remotePort}`);
+    socket.on("data",(data)=>{
+        console.log(data.toString());
+    })
+    socket.on("error",(err)=>{
+        console.log("error");
+    })
+    socket.once("close",()=>{
+        console.log("Client Connection is closed.")
+    })
+    socket.write("server:Hello connection made");
+});
+
+server.on("error",(err)=>{
+    if(err === 'EADDRINUSE' ){
+        console.log('Addess in use,retrying...')
+        setTimeout(()=>{
+            server.close();
+            server.listen(PORT,HOST);
+        },1000);
+    } else{
+        console.log("Server Failed");
+    }
+})
+
+server.listen(9000,()=>{
+    console.log(`opened server ${server.address().port}`)
+})
+
+
+
+/////////////////////2ns
+
+const net = require('net');
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+const client = net.createConnection({port:9000},()=>{
+    console.log("CLIENT: I am connected with the Server");
+    client.write("Client:Hello Connection is made.");
+})
+
+client.on('data',(data)=>{
+    console.log(data.toString());
+})
+client.on("end",()=>{
+    console.log("CLIENT: Disconnected");
+})
+
+rl.on('line',(input)=>{
+    client.write(`CLIENT: ${input}`);
+})
+
+==============================================================================================================================
+
+
+EVENT EMITTER_ HANDLING
+
+// Import the 'events' module
+const EventEmitter = require('events');
+
+// Create an instance of the EventEmitter class
+const myEmitter = new EventEmitter();
+
+// Register an event listener for the 'greet' event
+myEmitter.on('greet', (name) => {
+  console.log(`Hello, ${name}!`);
+});
+
+// Emit the 'greet' event
+myEmitter.emit('greet', 'Alice'); // This will trigger the event listener
+
+// Register another event listener for the 'greet' event
+myEmitter.on('greet', (name) => {
+  console.log(`Hi, ${name}!`);
+});
+
+// Emit the 'greet' event again
+myEmitter.emit('greet', 'Bob');
+
+// Remove the first 'greet' event listener
+myEmitter.removeListener('greet', (name) => {
+  console.log(`Hello, ${name}!`);
+});
+
+// Emit the 'greet' event one more time
+myEmitter.emit('greet', 'Charlie'); // Only the second listener will be called
+
+// Register an event listener that will execute only once for the 'message' event
+myEmitter.once('message', (text) => {
+  console.log(`Received a message: ${text}`);
+});
+
+// Emit the 'message' event
+myEmitter.emit('message', 'This is a one-time message');
+myEmitter.emit('message', 'This will not trigger the one-time listener');
+
+// Note: When registering and removing event listeners, it's essential to pass the same function reference to removeListener or once.
+
+================================================================================================================================================================================
+
+Custom Hooks
+
+import { useState, useEffect } from 'react';
+
+function useDataFetching(url) {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch(url)
+      .then((response) => response.json())
+      .then((result) => {
+        setData(result);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setIsLoading(false);
+      });
+  }, [url]);
+
+  return { data, isLoading };
+}
+
+export default useDataFetching;
+
+/////////////////////
+using it
+
+import React from 'react';
+import useDataFetching from './useDataFetching';
+
+function MyComponent() {
+  const { data, isLoading } = useDataFetching('https://api.example.com/data');
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      {data.map((item) => (
+        <div key={item.id}>{item.name}</div>
+      ))}
+    </div>
+  );
+}
+
+=================================================================================================================================
+
+
+React Dom Render
+
+import React from 'react';
+
+function App() {
+  return (
+    <div>
+      <h1>Hello, ReactDOM.render() in React</h1>
+    </div>
+  );
+}
+
+export default App;
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+================================================================================================================================
+
+React Form Validation
+
+import React, { useState } from 'react';
+
+function MyForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    age: '',
+    mobile: '',
+    email: '',
+    address: '',
+  });
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate(formData);
+    if (Object.keys(validationErrors).length === 0) {
+      // Form is valid, submit data or perform further actions.
+    } else {
+      setErrors(validationErrors);
+    }
+  };
+
+  const validate = (data) => {
+    const errors = {};
+
+    if (!data.name.trim()) {
+      errors.name = 'Name is required';
+    }
+
+    if (data.age.trim() && isNaN(data.age)) {
+      errors.age = 'Age must be a number';
+    }
+
+    if (data.mobile.trim() && !/^\d{10}$/.test(data.mobile)) {
+      errors.mobile = 'Invalid mobile number';
+    }
+
+    if (data.email.trim() && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(data.email)) {
+      errors.email = 'Invalid email format';
+    }
+
+    if (data.address.trim() && data.address.length < 10) {
+      errors.address = 'Address is too short';
+    }
+
+    return errors;
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>Name</label>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        {errors.name && <span className="error">{errors.name}</span>}
+      </div>
+      <div>
+        <label>Age</label>
+        <input
+          type="text"
+          name="age"
+          value={formData.age}
+          onChange={handleChange}
+        />
+        {errors.age && <span className="error">{errors.age}</span>}
+      </div>
+      <div>
+        <label>Mobile Number</label>
+        <input
+          type="text"
+          name="mobile"
+          value={formData.mobile}
+          onChange={handleChange}
+        />
+        {errors.mobile && <span className="error">{errors.mobile}</span>}
+      </div>
+      <div>
+        <label>Email</label>
+        <input
+          type="text"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        {errors.email && <span className="error">{errors.email}</span>}
+      </div>
+      <div>
+        <label>Address</label>
+        <input
+          type="text"
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+        />
+        {errors.address && <span className="error">{errors.address}</span>}
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default MyForm;
+
+=================================================================================================================================================
+
+
+
