@@ -810,3 +810,38 @@ BrowserRouter
 
 Link to
 
+================
+Fetching
+
+
+
+        //API
+        const response = await fetch(`http://127.0.0.1:5000/question/bookmark`, {
+          method: "POST", 
+          headers: {
+            "Content-Type": "application/json",
+            "auth-token": localStorage.getItem('token'),
+          },
+          body: JSON.stringify({quest : Questions,subject : Subject,marks : Marks, year : Year}), 
+        });
+        const note =  await response.json();
+
+//Server pe
+router.post('/bookmark',fetchuser, async (req,res)=>{
+
+    // If there are errors, return bad request & errors
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) { //error not empty 
+      return res.status(400).json({errors:errors.array()});
+    // return res.send("ERR") -- my code
+    }  
+
+
+    try {
+
+        const {quest,marks,year,subject} = req.body;
+        
+
+
+app.use(cors())
+app.use(express.json()); 
